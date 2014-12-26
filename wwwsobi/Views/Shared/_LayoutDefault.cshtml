@@ -1,7 +1,28 @@
 ﻿@{
   Layout = "~/Views/Shared/_LayoutGlobal.cshtml";
 }
+@section head{
+  @Styles.Render("~/Styles/Fonts", "~/Styles/Layouts/Default")
+}
+<header id="header">
+  <h1>@Header</h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/About">About</a></li>
+      <li><a href="/Contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="column-wrapper">
+  <aside id="sidebar">
 
+  </aside>
+  <main id="main">
+    @RenderBody()
+  </main>
+</div>
 @{
+  RedefineSection("foot", false);
   SuffixTitle("James Sobieski");
 }
