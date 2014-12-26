@@ -1,0 +1,11 @@
+﻿@import "../Mixins";
+
+@include init("Ubuntu Mono", "UbuntuMono", "UbuntuMono-", "", ttf);
+
+@include face("B", bold);
+
+@include face("BI", bold, italic);
+
+@include face("R");
+
+@include face("RI", $style: italic);

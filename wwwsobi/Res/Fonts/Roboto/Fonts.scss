@@ -1,0 +1,41 @@
+﻿@import "../Mixins";
+
+@include init("Roboto", "Roboto", "Roboto-", false, ttf);
+
+@include face("Black", black);
+
+@include face("BlackItalic", black, italic);
+
+@include face("Bold", bold);
+
+@include face("BoldItalic", bold, italic);
+
+@include face("Italic", $style: italic);
+
+@include face("Light", light);
+
+@include face("LightItalic", light, italic);
+
+@include face("Medium", medium);
+
+@include face("MediumItalic", medium, italic);
+
+@include face("Regular");
+
+@include face("Thin", thin);
+
+@include face("ThinItalic", thin, italic);
+
+@include stretch(condensed, "RobotoCondensed-");
+
+@include face("Bold", bold);
+
+@include face("BoldItalic", bold, italic);
+
+@include face("Italic", $style: italic);
+
+@include face("Light", light);
+
+@include face("LightItalic", light, italic);
+
+@include face("Regular");

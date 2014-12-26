@@ -1,0 +1,158 @@
+﻿@import "../Mixins.scss";
+
+////////////  Converters for dp and sp  ////////////
+
+$dp-scale: 1; //dp to px scale factor
+$sp-scale: 1; //sp to px scale factor
+
+//Converts dp to px
+@function dp($dp) {
+  @return #{$dp * $dp-scale}px;
+}
+
+//Converts sp to px
+@function sp($sp) {
+  @return #{$sp * $sp-scale}px;
+}
+
+$pg-dens: 8; //Pixel-grid density
+$fg-dens: 4; //Font-grid density
+
+@function pg($m, $a: 0) {
+  @return dp($m * $pg-dens + $a);
+}
+
+@function fg($m, $a: 0) {
+  @return sp($m * $fg-dens + $a);
+}
+
+////////////  Animation  ////////////
+
+$fast-dur: 0s; //Fast duration
+$med-dur: 0.2s; //Medium duration
+$slow-dur: 0.35s; //Slow duration
+$xslow-dur: 0.5s; //Extra-slow duration
+$xxslow-dur: 1s; //Even slower
+
+$lin: cubic-bezier(0.25, 0, 0.75, 1); //Pseudo-linear
+$ease: cubic-bezier(0.5, 0.15, 0.5, 0.85); //Ease
+$ease-in: cubic-bezier(0.75, 0.15, 0.75, 1); //Ease in
+$ease-out: cubic-bezier(0.25, 0, 0.25, 0.85); //Ease out
+$ease-s: cubic-bezier(0.5, 0, 0.5, 1); //Ease (sharp)
+$ease-in-s: cubic-bezier(0.75, 0, 0.75, 1); //Ease in (sharp)
+$ease-out-s: cubic-bezier(0.25, 0, 0.25, 1); //Ease out (sharp)
+
+////////////  Color palette  ////////////
+
+$lt-theme: true; //Default to lighter theme?
+
+$prim-hs: huesat(30, 75); //Primary hue and saturation
+
+//Returns a specific tint of the primary color
+@function tint-prim($tint) {
+  @return tint-hs($prim-hs, $tint);
+}
+
+$acc-hs: huesat(90, 95); //Accent hue
+
+//Returns a specific tint of the accent color
+@function tint-acc($tint) {
+  @return tint-hs($acc-hs, $tint);
+}
+
+$k-text: rgba(black, .87); //Black text color
+$k-icon: rgba(black, .54); //Black icon color
+$k-sec: rgba(black, .54); //Black secondary color
+$k-disabled: rgba(black, .26); //Black disabled color
+$k-divs: rgba(black, .12); //Black divider color
+$w-text: rgba(white, 1); //White text color
+$w-icon: rgba(white, 1); //White icon color
+$w-sec: rgba(white, .7); //White secondary color
+$w-disabled: rgba(white, .3); //White disabled color
+$w-divs: rgba(white, .12); //White divider color
+
+//Gets the text color
+@function text-clr($l: $lt-theme) {
+  @return if($l, $k-text, $w-text);
+}
+
+//Gets the icon color
+@function icon-clr($l: $lt-theme) {
+  @return if($l, $k-icon, $w-icon);
+}
+
+//Gets the secondary color
+@function sec-clr($l: $lt-theme) {
+  @return if($l, $k-sec, $w-sec);
+}
+
+//Gets the disabled color
+@function disabled-clr($l: $lt-theme) {
+  @return if($l, $k-disabled, $w-disabled);
+}
+
+//Gets the divider color
+@function divs-clr($l: $lt-theme) {
+  @return if($l, $k-divs, $w-divs);
+}
+
+////////////  Shadows  ////////////
+
+$d-tint: rgba(white, .2); //Tint color for darker tones
+$l-tint: rgba(white, .4); //Tint color for lighter tones
+$d-shade: rgba(black, .2); //Shade color for darker tones
+$l-shade: rgba(black, .1); //Shade color for lighter tones
+
+//Gets the tint color
+@function tint-clr($l: $lt-theme) {
+  @return if($l, $l-tint, $d-tint);
+}
+
+@function shade-clr($l: $lt-theme) {
+  @return if($l, $l-shade, $d-shade);
+}
+
+//Returns a box-shadow value for a drop shadow
+@function drop-shadow($z-offs, $clr: shad-clr($lt-theme), $inset: false) {
+  @return 0 dp($z-offs) dp($z-offs * 2) $clr if($inset, inset,'');
+}
+
+//Returns a box-shadow value for an ambient shadow
+@function amb-shadow($z-offs, $clr: shade-clr($lt-theme), $inset: false) {
+  @return 0 0 dp($z-offs) change-color($clr, $alpha: alpha($clr) / 2) if($inset, inset, '');
+}
+
+//Returns a box-shadow value for a combined drop and ambient shadow
+@function shadow($z-offs, $clr: shade-clr($lt-theme), $inset: false) {
+  @return drop-shadow($z-offs, $clr, $inset), amb-shadow($z-offs, $clr, $inset);
+}
+
+//Returns a box-shadow value for a tinted top edge
+@function tint-edge($clr: tint-clr($lt-theme)) {
+  @return 0 dp(1) 0 $clr inset;
+}
+
+//Returns a box-shadow value for a shaded bottom edge
+@function shade-edge($clr: shade-clr($lt-theme)) {
+  @return 0 dp(-1) 0 $clr inset;
+}
+
+//Returns a box-shadow value for a tinted top edge and shaded bottom edge
+@function acc-edges($tclr: tint-clr($lt-theme), $sclr: shade-clr($lt-theme)) {
+  @return tint-edge($tclr), shade-edge($sclr);
+}
+
+////////////  Typography  ////////////
+
+@mixin def-family {
+  font-family: Roboto, 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+////////////  Selectors  ////////////
+
+@mixin ha {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}

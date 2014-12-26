@@ -1,0 +1,49 @@
+﻿@import "../Fonts/_Globals.scss";
+
+@function font-weight($weight) {
+  @return map-get($_fweights, $weight);
+}
+
+@function stretch-font($name, $stretch) {
+  @return $name + if($_fakeStretches, map-get($_fstretches, $stretch), '');
+}
+
+@function tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}
+
+@function grayp($percent) {
+  @return hsl(0, 0, $percent);
+}
+
+@function graypa($percent, $alpha) {
+  @return hsla(0, 0, $percent, $alpha);
+}
+
+@function hst($hue, $sat, $tint) {
+  @return hsl($hue, $sat, 100 - $tint / 10);
+}
+
+@function hsta($hue, $sat, $tint, $alpha) {
+  @return hsla($hue, $sat, 100 - $tint / 10, $alpha);
+}
+
+@function grayt($tint) {
+  @return hst(0, 0, $tint);
+}
+
+@function grayta($tint, $alpha) {
+  @return hsta(0, 0, $tint, $alpha);
+}
+
+@function huesat($hue, $sat) {
+  @return ("hue": $hue, "sat": $sat);
+}
+
+@function tint-hs($hs, $tint) {
+  @return hst(map-get($hs, "hue"), map-get($hs, "sat"), $tint);
+}

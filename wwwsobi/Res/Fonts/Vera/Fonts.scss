@@ -1,0 +1,13 @@
+﻿@import "../Mixins";
+
+@include init("Bitstream Vera Sans", "Vera", "Vera-", "-webfont", ttf);
+
+@include face("Bold-Italic", bold, italic);
+
+@include face("Bold", bold);
+
+@include face("Italic", $style: italic);
+
+@include switch($suffix: "webfont");
+
+@include face("");

@@ -1,0 +1,17 @@
+﻿@import "../Mixins";
+
+@include init("Source Code Pro", "SourceCodePro", "SourceCodePro-", false, otf, ttf);
+
+@include face("Black", black);
+
+@include face("Bold", bold);
+
+@include face("ExtraLight", extra-light);
+
+@include face("Light", light);
+
+@include face("Medium", medium);
+
+@include face("Regular");
+
+@include face("Semibold", semibold);

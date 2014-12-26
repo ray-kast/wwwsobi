@@ -1,0 +1,11 @@
+﻿@import "../Mixins";
+
+@include init("Roboto Slab", "RobotoSlab", "RobotoSlab-", false, ttf);
+
+@include face("Bold", bold);
+
+@include face("Light", light);
+
+@include face("Regular");
+
+@include face("Thin", thin);

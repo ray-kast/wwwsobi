@@ -1,0 +1,31 @@
+﻿@import "../Mixins";
+
+@include init("Open Sans", "OpenSans", "OpenSans-", false, ttf);
+
+@include face("Bold", bold);
+
+@include face("BoldItalic", bold, italic);
+
+@include face("ExtraBold", extra-bold);
+
+@include face("ExtraBoldItalic", extra-bold, italic);
+
+@include face("Italic", $style: italic);
+
+@include face("Light", light);
+
+@include face("LightItalic", light, italic);
+
+@include face("Regular");
+
+@include face("Semibold", semibold);
+
+@include face("SemiboldItalic", semibold, italic);
+
+@include stretch(condensed, "OpenSans-Cond");
+
+@include face("Bold", bold);
+
+@include face("Light", light);
+
+@include face("LightItalic", light, italic);

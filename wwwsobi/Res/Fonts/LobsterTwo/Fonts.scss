@@ -1,0 +1,11 @@
+﻿@import "../Mixins";
+
+@include init("Lobster Two", "LobsterTwo", "LobsterTwo-", "", otf);
+
+@include face("Bold", bold);
+
+@include face("BoldItalic", bold, italic);
+
+@include face("Italic", $style: italic);
+
+@include face("Regular");

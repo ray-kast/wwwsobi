@@ -1,0 +1,15 @@
+﻿@import "../Mixins.scss";
+
+@include init("Crimson", "Crimson", "Crimson-", "-webfont", ttf);
+
+@include face("Bold", bold);
+
+@include face("BoldItalic", bold, italic);
+
+@include face("Italic", $style: italic);
+
+@include face("Roman");
+
+@include face("Semibold", semibold);
+
+@include face("SemiboldItalic", semibold, italic);

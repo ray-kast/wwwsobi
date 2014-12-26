@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBB69408-04BA-4C25-9CE8-8937EAF2900A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wwwsobi</RootNamespace>
+    <AssemblyName>wwwsobi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BundleTransformer.Autoprefixer">
+      <HintPath>..\packages\BundleTransformer.Autoprefixer.1.9.36\lib\net40\BundleTransformer.Autoprefixer.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core">
+      <HintPath>..\packages\BundleTransformer.Core.1.9.35\lib\net40\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.SassAndScss">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.34\lib\net40\BundleTransformer.SassAndScss.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.TypeScript">
+      <HintPath>..\packages\BundleTransformer.TypeScript.1.9.34\lib\net40\BundleTransformer.TypeScript.dll</HintPath>
+    </Reference>
+    <Reference Include="ClearScript">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.V8.1.2.1\lib\net40\ClearScript.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.34\lib\net40\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.34\lib\net40\IronRuby.Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Core.1.2.0\lib\net40\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.V8">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.V8.1.2.1\lib\net40\JavaScriptEngineSwitcher.V8.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.34\lib\net40\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.34\lib\net40\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="rkWeb">
+      <HintPath>..\packages\rkWeb.1.0.0.4\lib\net451\rkWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClearScript.V8\ClearScriptV8-32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ClearScript.V8\ClearScriptV8-64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ClearScript.V8\v8-ia32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ClearScript.V8\v8-x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Res\Scripts\Lib\rkLib\rkLib.touch.js" />
+    <Content Include="Res\Scripts\Lib\rkLib_old.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_LayoutDefault.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Res\Fonts\Vera\Vera-webfont.ttf" />
+    <Content Include="Res\Fonts\Vera\Vera-Italic-webfont.ttf" />
+    <Content Include="Res\Fonts\Vera\Vera-Bold-webfont.ttf" />
+    <Content Include="Res\Fonts\Vera\Vera-Bold-Italic-webfont.ttf" />
+    <Content Include="Res\Fonts\Vera\Fonts.scss" />
+    <Content Include="Res\Fonts\Unifont\Unifont.ttf" />
+    <Content Include="Res\Fonts\Unifont\Fonts.scss" />
+    <Content Include="Res\Fonts\UbuntuMono\UbuntuMono-RI.ttf" />
+    <Content Include="Res\Fonts\UbuntuMono\UbuntuMono-R.ttf" />
+    <Content Include="Res\Fonts\UbuntuMono\UbuntuMono-BI.ttf" />
+    <Content Include="Res\Fonts\UbuntuMono\UbuntuMono-B.ttf" />
+    <Content Include="Res\Fonts\UbuntuMono\Fonts.scss" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-RI.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-R.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-MI.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-M.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-LI.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-L.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-C.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-BI.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Ubuntu-B.ttf" />
+    <Content Include="Res\Fonts\Ubuntu\Fonts.scss" />
+    <Content Include="Res\Fonts\Teutonic\teutonic4.ttf" />
+    <Content Include="Res\Fonts\Teutonic\teutonic3.ttf" />
+    <Content Include="Res\Fonts\Teutonic\teutonic2.ttf" />
+    <Content Include="Res\Fonts\Teutonic\teutonic1.ttf" />
+    <Content Include="Res\Fonts\Teutonic\Fonts.scss" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-SemiboldIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-SemiboldIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Semibold.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Semibold.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-RegularIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-RegularIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Regular.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Regular.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-LightIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-LightIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Light.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Light.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-ExtraLightIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-ExtraLightIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-ExtraLight.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-ExtraLight.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-BoldIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-BoldIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Bold.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Bold.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-BlackIt.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-BlackIt.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Black.ttf" />
+    <Content Include="Res\Fonts\SourceSansPro\SourceSansPro-Black.otf" />
+    <Content Include="Res\Fonts\SourceSansPro\Fonts.scss" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Semibold.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Semibold.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Regular.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Regular.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Medium.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Medium.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Light.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Light.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-ExtraLight.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-ExtraLight.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Bold.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Bold.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Black.ttf" />
+    <Content Include="Res\Fonts\SourceCodePro\SourceCodePro-Black.otf" />
+    <Content Include="Res\Fonts\SourceCodePro\Fonts.scss" />
+    <Content Include="Res\Fonts\RobotoSlab\RobotoSlab-Thin.ttf" />
+    <Content Include="Res\Fonts\RobotoSlab\RobotoSlab-Regular.ttf" />
+    <Content Include="Res\Fonts\RobotoSlab\RobotoSlab-Light.ttf" />
+    <Content Include="Res\Fonts\RobotoSlab\RobotoSlab-Bold.ttf" />
+    <Content Include="Res\Fonts\RobotoSlab\Fonts.scss" />
+    <Content Include="Res\Fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Thin.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-LightItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Italic.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-Regular.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-Light.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-Italic.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\RobotoCondensed-Bold.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="Res\Fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="Res\Fonts\Roboto\Fonts.scss" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-rounded.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-regular.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-light.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-dashed.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-bold.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\ostrich-black.ttf" />
+    <Content Include="Res\Fonts\OstrichSans\Fonts.scss" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-Semibold.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-Regular.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-LightItalic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-Light.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-Italic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-ExtraBold.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-CondLightItalic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-CondLight.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-CondBold.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-BoldItalic.ttf" />
+    <Content Include="Res\Fonts\OpenSans\OpenSans-Bold.ttf" />
+    <Content Include="Res\Fonts\OpenSans\Fonts.scss" />
+    <Content Include="Res\Fonts\Minecraftia\Minecraftia.ttf" />
+    <Content Include="Res\Fonts\Minecraftia\Fonts.scss" />
+    <Content Include="Res\Fonts\LogoCraft\LogoCraft.ttf" />
+    <Content Include="Res\Fonts\LogoCraft\Fonts.scss" />
+    <Content Include="Res\Fonts\LobsterTwo\LobsterTwo-Regular.otf" />
+    <Content Include="Res\Fonts\LobsterTwo\LobsterTwo-Italic.otf" />
+    <Content Include="Res\Fonts\LobsterTwo\LobsterTwo-BoldItalic.otf" />
+    <Content Include="Res\Fonts\LobsterTwo\LobsterTwo-Bold.otf" />
+    <Content Include="Res\Fonts\LobsterTwo\Fonts.scss" />
+    <Content Include="Res\Fonts\Lobster\Lobster_1.3.otf" />
+    <Content Include="Res\Fonts\Lobster\Fonts.scss" />
+    <Content Include="Res\Fonts\LeagueGothic\LeagueGothic-Regular.otf" />
+    <Content Include="Res\Fonts\LeagueGothic\LeagueGothic-Italic.otf" />
+    <Content Include="Res\Fonts\LeagueGothic\LeagueGothic-CondensedRegular.otf" />
+    <Content Include="Res\Fonts\LeagueGothic\LeagueGothic-CondensedItalic.otf" />
+    <Content Include="Res\Fonts\LeagueGothic\Fonts.scss" />
+    <Content Include="Res\Fonts\LastResort\LastResort.ttf" />
+    <Content Include="Res\Fonts\LastResort\Fonts.scss" />
+    <Content Include="Res\Fonts\Kavoon\Kavoon-Regular.otf" />
+    <Content Include="Res\Fonts\Kavoon\Fonts.scss" />
+    <Content Include="Res\Fonts\GrutchShaded\GrutchShaded.ttf" />
+    <Content Include="Res\Fonts\GrutchShaded\Fonts.scss" />
+    <Content Include="Res\Fonts\Crimson\Fonts.scss" />
+    <Content Include="Res\Fonts\Crimson\Crimson-Semibold-webfont.ttf" />
+    <Content Include="Res\Fonts\Crimson\Crimson-SemiboldItalic-webfont.ttf" />
+    <Content Include="Res\Fonts\Crimson\Crimson-Roman-webfont.ttf" />
+    <Content Include="Res\Fonts\Crimson\Crimson-Italic-webfont.ttf" />
+    <Content Include="Res\Fonts\Crimson\Crimson-Bold-webfont.ttf" />
+    <Content Include="Res\Fonts\Crimson\Crimson-BoldItalic-webfont.ttf" />
+    <Content Include="Res\Fonts\Cardo\Fonts.scss" />
+    <Content Include="Res\Fonts\Cardo\Cardo-italic.otf" />
+    <Content Include="Res\Fonts\Cardo\Cardo-bold.ttf" />
+    <Content Include="Res\Fonts\Cardo\Cardo.ttf" />
+    <Content Include="Res\Fonts\Astronaut\Fonts.scss" />
+    <Content Include="Res\Fonts\Astronaut\AstroIII.TTF" />
+    <Content Include="Res\Fonts\Astronaut\AstroII.TTF" />
+    <Content Include="Res\Fonts\Arcade\Fonts.scss" />
+    <Content Include="Res\Fonts\Arcade\ArcadeRounded.TTF" />
+    <Content Include="Res\Fonts\Aller\Fonts.scss" />
+    <Content Include="Res\Fonts\Aller\AllerDisplay.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_Rg.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_LtIt.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_Lt.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_It.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_BdIt.ttf" />
+    <Content Include="Res\Fonts\Aller\Aller_Bd.ttf" />
+    <Content Include="Res\Fonts\AdhesiveNrSeven\Fonts.scss" />
+    <Content Include="Res\Fonts\AdhesiveNrSeven\AdhesiveNrSevenBanners.ttf" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_LayoutGlobal.cshtml" />
+    <Content Include="Res\Styles\Themes\Global.scss" />
+    <Content Include="Res\Styles\Mixins.scss" />
+    <Content Include="Res\Fonts\Mixins.scss" />
+    <Content Include="Res\Fonts\_Globals.scss" />
+    <Content Include="Res\Styles\Layouts\Default.scss" />
+    <Content Include="Res\Styles\Themes\Default.scss" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BundleTransformer.Configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Res\Scripts\Lib\rkLib.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49663</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1290/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,72 @@
+﻿@import "_Globals.scss";
+$_family: "" !default;
+$_prefix: "" !default;
+$_suffix: "" !default;
+$_folder: "" !default;
+$_stretch: "" !default;
+$_exts: () !default;
+$_init: false;
+
+@mixin init($family, $folder, $prefix, $suffix, $exts...) {
+  $_init: true;
+  @include switch($family, $prefix, $suffix, normal);
+  $_folder: $folder;
+  $_exts: $exts;
+}
+
+@mixin switch($family: false, $prefix: false, $suffix: false, $stretch: normal) {
+  @if $_init {
+    @if $family {
+      $_family: $family;
+    }
+
+    @if $prefix {
+      $_prefix: $prefix;
+    }
+
+    @if $suffix {
+      $_suffix: $suffix;
+    }
+
+    $_stretch: $stretch;
+  }
+}
+
+@mixin facexts($exts...) {
+  $_exts: $exts;
+}
+
+@mixin stretch($stretch, $prefix: false, $suffix: false) {
+  @include switch($prefix: $prefix, $suffix: $suffix, $stretch: $stretch);
+}
+
+@mixin font($family, $folder, $name, $weight, $style, $stretch, $exts...) {
+  @if if$stretch == "normal" {
+    $formats: (eot: embedded-opentype, otf: opentype, svg: svg, ttf: truetype, woff: woff);
+    $src: "";
+
+    $exts: if(nth($exts, 1), nth($exts, 1), $exts);
+
+    @each $ext in $exts {
+      $src: $src + ", url('/Res/Fonts/#{$folder + "/" + $name + "." + $ext}') format('#{map_get($formats, $ext)}')";
+    }
+
+    @font-face {
+      font-weight: map-get($_fweights, $weight);
+      font-style: $style;
+      font-stretch: $stretch;
+      font-family: '#{$family + if($_fakeStretches, map-get($_fstretches, $stretch), "")}';
+      src: #{str-slice($src, 3)};
+    }
+  }
+}
+
+@mixin regfont($family, $folder, $name, $exts...) {
+  @include font($family, $folder, $name, normal, normal, normal, $exts);
+}
+
+@mixin face($name, $weight: normal, $style: normal, $stretch: false, $family: false) {
+  @if $_init {
+    @include font(if($family, $family, $_family), $_folder, $_prefix + $name + $_suffix, $weight, $style, if($stretch, $stretch, $_stretch), $_exts);
+  }
+}

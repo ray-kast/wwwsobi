@@ -1,0 +1,19 @@
+﻿@import "../Mixins";
+
+@include init("Aller", "Aller", "Aller_", false, ttf);
+
+@include face("Bd", bold);
+
+@include face("BdIt", bold, italic);
+
+@include face("It", $style: italic);
+
+@include face("Lt", light);
+
+@include face("LtIt", light, italic);
+
+@include face("Rg");
+
+@include switch("Aller Display", "AllerDisplay");
+
+@include face("");

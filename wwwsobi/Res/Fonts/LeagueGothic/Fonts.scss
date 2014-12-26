@@ -1,0 +1,13 @@
+﻿@import "../Mixins";
+
+@include init("League Gothic", "LeagueGothic", "LeagueGothic-", false, otf);
+
+@include face("Italic", $style: italic);
+
+@include face("Regular");
+
+@include stretch(condensed, "LeagueGothic-Condensed");
+
+@include face("Italic", $style: italic);
+
+@include face("Regular");

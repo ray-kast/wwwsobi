@@ -1,0 +1,15 @@
+﻿@import "../Mixins";
+
+@include init("Ostrich Sans", "OstrichSans", "ostrich-", "", ttf);
+
+@include face("black", black);
+
+@include face("bold", bold);
+
+@include face("light", light);
+
+@include face("regular");
+
+@include regfont("Ostrich Sans Dashed", "OstrichSans", "ostrich-dashed", ttf);
+
+@include regfont("Ostrich Sans Rounded", "OstrichSans", "ostrich-rounded", ttf);

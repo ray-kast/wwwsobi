@@ -1,0 +1,27 @@
+﻿@import "../Mixins";
+
+@include init("Source Sans Pro", "SourceSansPro", "SourceSansPro-", false, otf, ttf);
+
+@include face("Black", black);
+
+@include face("BlackIt", black, italic);
+
+@include face("Bold", bold);
+
+@include face("BoldIt", bold, italic);
+
+@include face("ExtraLight", extra-light);
+
+@include face("ExtraLightIt", extra-light, italic);
+
+@include face("Light", light);
+
+@include face("LightIt", light, italic);
+
+@include face("Regular");
+
+@include face("RegularIt", $style: italic);
+
+@include face("Semibold", semibold);
+
+@include face("SemiboldIt", semibold, italic);

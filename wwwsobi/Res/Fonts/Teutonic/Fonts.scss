@@ -1,0 +1,11 @@
+﻿@import "../Mixins";
+
+@include init("Teutonic", "Teutonic", "teutonic", false, ttf);
+
+@include face("1", $family: "Teutonic 1");
+
+@include face("2", $family: "Teutonic 2");
+
+@include face("3", $family: "Teutonic 3");
+
+@include face("4", $family: "Teutonic 4");

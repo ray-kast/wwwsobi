@@ -1,0 +1,7 @@
+﻿@import "../Mixins";
+
+@include init("Astronaut", "Astronaut", "Astro", false, ttf);
+
+@include face("II", $family: "Astronaut II");
+
+@include face("III", $family: "Astronaut III");
