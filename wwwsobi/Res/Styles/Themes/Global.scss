@@ -35,12 +35,12 @@ $xslow-dur: 0.5s; //Extra-slow duration
 $xxslow-dur: 1s; //Even slower
 
 $lin: cubic-bezier(0.25, 0, 0.75, 1); //Pseudo-linear
-$ease: cubic-bezier(0.5, 0.15, 0.5, 0.85); //Ease
+$ease: cubic-bezier(0.5, 0.15, 0.5, 1); //Ease
 $ease-in: cubic-bezier(0.75, 0.15, 0.75, 1); //Ease in
-$ease-out: cubic-bezier(0.25, 0, 0.25, 0.85); //Ease out
+$ease-out: cubic-bezier(0.25, 0, 0.25, 1); //Ease out
 $ease-s: cubic-bezier(0.5, 0, 0.5, 1); //Ease (sharp)
-$ease-in-s: cubic-bezier(0.75, 0, 0.75, 1); //Ease in (sharp)
-$ease-out-s: cubic-bezier(0.25, 0, 0.25, 1); //Ease out (sharp)
+$ease-in-s: cubic-bezier(0.5, 0, 1, 0.5); //Ease in (sharp)
+$ease-out-s: cubic-bezier(0, 0.5, 0.5, 1); //Ease out (sharp)
 
 ////////////  Color palette  ////////////
 
@@ -100,8 +100,8 @@ $w-divs: rgba(white, .12); //White divider color
 
 $d-tint: rgba(white, .2); //Tint color for darker tones
 $l-tint: rgba(white, .4); //Tint color for lighter tones
-$d-shade: rgba(black, .2); //Shade color for darker tones
-$l-shade: rgba(black, .1); //Shade color for lighter tones
+$d-shade: rgba(black, .4); //Shade color for darker tones
+$l-shade: rgba(black, .2); //Shade color for lighter tones
 
 //Gets the tint color
 @function tint-clr($l: $lt-theme) {
@@ -114,12 +114,12 @@ $l-shade: rgba(black, .1); //Shade color for lighter tones
 
 //Returns a box-shadow value for a drop shadow
 @function drop-shadow($z-offs, $clr: shad-clr($lt-theme), $inset: false) {
-  @return 0 dp($z-offs) dp($z-offs * 2) $clr if($inset, inset,'');
+  @return 0 dp($z-offs) dp($z-offs * 2) $clr if($inset, inset, $nullstr);
 }
 
 //Returns a box-shadow value for an ambient shadow
 @function amb-shadow($z-offs, $clr: shade-clr($lt-theme), $inset: false) {
-  @return 0 0 dp($z-offs) change-color($clr, $alpha: alpha($clr) / 2) if($inset, inset, '');
+  @return 0 0 dp($z-offs) change-color($clr, $alpha: alpha($clr) / 2) if($inset, inset, $nullstr);
 }
 
 //Returns a box-shadow value for a combined drop and ambient shadow

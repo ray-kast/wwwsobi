@@ -47,3 +47,5 @@
 @function tint-hs($hs, $tint) {
   @return hst(map-get($hs, "hue"), map-get($hs, "sat"), $tint);
 }
+
+$nullstr: unquote("");

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wwwsobi", "wwwsobi\wwwsobi.csproj", "{FBB69408-04BA-4C25-9CE8-8937EAF2900A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rkWeb", "..\rkWeb\rkWeb\rkWeb.csproj", "{433E2E98-1A49-4EB2-9443-1B8A46A11379}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FBB69408-04BA-4C25-9CE8-8937EAF2900A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB69408-04BA-4C25-9CE8-8937EAF2900A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB69408-04BA-4C25-9CE8-8937EAF2900A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433E2E98-1A49-4EB2-9443-1B8A46A11379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433E2E98-1A49-4EB2-9443-1B8A46A11379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433E2E98-1A49-4EB2-9443-1B8A46A11379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433E2E98-1A49-4EB2-9443-1B8A46A11379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

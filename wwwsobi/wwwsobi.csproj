@@ -80,7 +80,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="rkWeb">
+    <Reference Include="rkWeb, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\rkWeb.1.0.0.4\lib\net451\rkWeb.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -185,8 +186,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Res\Scripts\Lib\rkLib\rkLib.touch.js" />
-    <Content Include="Res\Scripts\Lib\rkLib_old.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -359,16 +358,16 @@
     <Content Include="Res\Fonts\Aller\Aller_Bd.ttf" />
     <Content Include="Res\Fonts\AdhesiveNrSeven\Fonts.scss" />
     <Content Include="Res\Fonts\AdhesiveNrSeven\AdhesiveNrSevenBanners.ttf" />
+    <Content Include="Res\Styles\Layouts\Default.scss" />
+    <Content Include="Res\Styles\Themes\Default.scss" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_LayoutGlobal.cshtml" />
     <Content Include="Res\Styles\Themes\Global.scss" />
     <Content Include="Res\Styles\Mixins.scss" />
     <Content Include="Res\Fonts\Mixins.scss" />
     <Content Include="Res\Fonts\_Globals.scss" />
-    <Content Include="Res\Styles\Layouts\Default.scss" />
-    <Content Include="Res\Styles\Themes\Default.scss" />
-    <Content Include="Views\Contact\Index.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
