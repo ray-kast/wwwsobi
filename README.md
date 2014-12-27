@@ -1,6 +1,6 @@
 wwwsobi
 =======
 
-For jamesobi
+A website for user __jamesobi__.
 
-__Help I don't know .md syntax__
+_Help I don't know .md syntax_
