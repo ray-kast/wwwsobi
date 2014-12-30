@@ -108,12 +108,13 @@ $l-shade: rgba(black, .2); //Shade color for lighter tones
   @return if($l, $l-tint, $d-tint);
 }
 
+//Gets the shade color
 @function shade-clr($l: $lt-theme) {
   @return if($l, $l-shade, $d-shade);
 }
 
 //Returns a box-shadow value for a drop shadow
-@function drop-shadow($z-offs, $clr: shad-clr($lt-theme), $inset: false) {
+@function drop-shadow($z-offs, $clr: shade-clr($lt-theme), $inset: false) {
   @return 0 dp($z-offs) dp($z-offs * 2) $clr if($inset, inset, $nullstr);
 }
 
